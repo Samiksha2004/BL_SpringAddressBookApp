@@ -1,8 +1,7 @@
 package com.example.SpringAddressBookAppDevelopment.service;
 
-import com.example.SpringAddressBookAppDevelopment.dto.AddressBookDTO;
-import com.example.SpringAddressBookAppDevelopment.model.AddressBookEntry;
 import com.example.SpringAddressBookAppDevelopment.repository.AddressBookRepository;
+import com.example.SpringAddressBookAppDevelopment.model.AddressBookEntry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +10,6 @@ import java.util.Optional;
 
 @Service
 public class AddressBookService {
-
     @Autowired
     private AddressBookRepository repository;
 
@@ -23,17 +21,17 @@ public class AddressBookService {
         return repository.findById(id);
     }
 
-    public AddressBookEntry addEntry(AddressBookDTO dto) {
-        AddressBookEntry entry = new AddressBookEntry(null, dto.getName(), dto.getPhoneNumber(), dto.getEmail()); // ✅ Fixed
+    public AddressBookEntry addEntry(AddressBookEntry entry) {
         return repository.save(entry);
     }
 
-    public AddressBookEntry updateEntry(Long id, AddressBookDTO dto) {
-        AddressBookEntry entry = repository.findById(id).orElseThrow(() -> new RuntimeException("Entry not found"));
-        entry.setName(dto.getName());
-        entry.setPhone(dto.getPhoneNumber()); //
-        entry.setEmail(dto.getEmail());
-        return repository.save(entry);
+    public AddressBookEntry updateEntry(Long id, AddressBookEntry entryDetails) {
+        return repository.findById(id).map(entry -> {
+            entry.setName(entryDetails.getName());
+            entry.setPhone(entryDetails.getPhone());
+            entry.setEmail(entryDetails.getEmail());
+            return repository.save(entry);
+        }).orElseThrow(() -> new RuntimeException("Entry not found"));
     }
 
     public void deleteEntry(Long id) {
