@@ -1,40 +1,51 @@
 package com.example.SpringAddressBookAppDevelopment.service;
 
-import com.example.SpringAddressBookAppDevelopment.repository.AddressBookRepository;
-import com.example.SpringAddressBookAppDevelopment.model.AddressBookEntry;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.SpringAddressBookAppDevelopment.dto.ContactDTO;
+import com.example.SpringAddressBookAppDevelopment.model.Contact;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class AddressBookService {
-    @Autowired
-    private AddressBookRepository repository;
+    private List<Contact> contacts = new ArrayList<>();
+    private Long nextId = 1L;
 
-    public List<AddressBookEntry> getAllEntries() {
-        return repository.findAll();
+    // Method to get all contacts
+    public List<Contact> getAllContacts() {
+        return contacts;
     }
 
-    public Optional<AddressBookEntry> getEntryById(Long id) {
-        return repository.findById(id);
+    // Method to get a contact by ID
+    public Contact getContactById(Long id) {
+        return contacts.stream()
+                .filter(contact -> contact.getId().equals(id))
+                .findFirst()
+                .orElse(null);
     }
 
-    public AddressBookEntry addEntry(AddressBookEntry entry) {
-        return repository.save(entry);
+    // Method to add a new contact
+    public Contact addContact(ContactDTO contactDTO) {
+        Contact newContact = new Contact(nextId++, contactDTO.getName(), contactDTO.getPhone(), contactDTO.getEmail());
+        contacts.add(newContact);
+        return newContact;
     }
 
-    public AddressBookEntry updateEntry(Long id, AddressBookEntry entryDetails) {
-        return repository.findById(id).map(entry -> {
-            entry.setName(entryDetails.getName());
-            entry.setPhone(entryDetails.getPhone());
-            entry.setEmail(entryDetails.getEmail());
-            return repository.save(entry);
-        }).orElseThrow(() -> new RuntimeException("Entry not found"));
+    // Method to update a contact
+    public boolean updateContact(Long id, ContactDTO contactDTO) {
+        Contact contact = getContactById(id);
+        if (contact != null) {
+            contact.setName(contactDTO.getName());
+            contact.setPhone(contactDTO.getPhone());
+            contact.setEmail(contactDTO.getEmail());
+            return true;
+        }
+        return false;
     }
 
-    public void deleteEntry(Long id) {
-        repository.deleteById(id);
+    // Method to delete a contact
+    public boolean deleteContact(Long id) {
+        return contacts.removeIf(contact -> contact.getId().equals(id));
     }
 }

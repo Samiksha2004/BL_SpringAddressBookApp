@@ -1,25 +1,20 @@
-package com.example.SpringAddressBookAppDevelopment.model;
+package com.example.SpringAddressBookAppDevelopment.dto;
 
-public class Contact {
-    private Long id;
+public class ContactDTO {
     private String name;
     private String phone;
     private String email;
 
     // Constructors
-    public Contact() {}
+    public ContactDTO() {}
 
-    public Contact(Long id, String name, String phone, String email) {
-        this.id = id;
+    public ContactDTO(String name, String phone, String email) {
         this.name = name;
         this.phone = phone;
         this.email = email;
     }
 
     // Getters and Setters
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
-
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
 
