@@ -14,7 +14,7 @@ import java.util.List;
 public class AddressBookController {
 
     @Autowired
-    private AddressBookService addressBookService; // Dependency Injection
+    private AddressBookService addressBookService; // Service Layer Dependency Injection
 
     // GET - Retrieve all contacts
     @GetMapping("/contacts")
@@ -34,9 +34,9 @@ public class AddressBookController {
 
     // POST - Add a new contact
     @PostMapping("/contacts")
-    public ResponseEntity<String> addContact(@RequestBody Contact contact) {
-        addressBookService.addContact(contact);
-        return new ResponseEntity<>("Contact added successfully", HttpStatus.CREATED);
+    public ResponseEntity<Contact> addContact(@RequestBody Contact contact) {
+        Contact newContact = addressBookService.addContact(contact);
+        return new ResponseEntity<>(newContact, HttpStatus.CREATED);
     }
 
     // PUT - Update contact by ID
@@ -45,7 +45,7 @@ public class AddressBookController {
         if (addressBookService.updateContact(id, contact)) {
             return new ResponseEntity<>("Contact updated successfully", HttpStatus.OK);
         }
-        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>("Contact not found", HttpStatus.NOT_FOUND);
     }
 
     // DELETE - Remove a contact by ID
@@ -54,6 +54,6 @@ public class AddressBookController {
         if (addressBookService.deleteContact(id)) {
             return new ResponseEntity<>("Contact deleted successfully", HttpStatus.OK);
         }
-        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>("Contact not found", HttpStatus.NOT_FOUND);
     }
 }

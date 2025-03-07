@@ -9,7 +9,7 @@ import java.util.List;
 @Service
 public class AddressBookService {
 
-    private final List<Contact> contacts = new ArrayList<>();
+    private final List<Contact> contacts = new ArrayList<>(); // In-memory storage
 
     // Get all contacts
     public List<Contact> getAllContacts() {
@@ -25,8 +25,9 @@ public class AddressBookService {
     }
 
     // Add a new contact
-    public void addContact(Contact contact) {
+    public Contact addContact(Contact contact) {
         contacts.add(contact);
+        return contact; // Return newly added contact
     }
 
     // Update existing contact
