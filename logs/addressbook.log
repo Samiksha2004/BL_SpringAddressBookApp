@@ -1,0 +1,60 @@
+2025-03-08 14:07:06 [restartedMain] INFO  c.e.S.SpringAddressBookAppDevelopmentApplication - Starting SpringAddressBookAppDevelopmentApplication using Java 23.0.2 with PID 14276 (/Users/samikshathakur/Documents/Capgemini/SpringBoot/Spring-Address-Book-App-Development/target/classes started by samikshathakur in /Users/samikshathakur/Documents/Capgemini/SpringBoot/Spring-Address-Book-App-Development)
+2025-03-08 14:07:06 [restartedMain] DEBUG c.e.S.SpringAddressBookAppDevelopmentApplication - Running with Spring Boot v3.5.0-SNAPSHOT, Spring v6.2.4-SNAPSHOT
+2025-03-08 14:07:06 [restartedMain] INFO  c.e.S.SpringAddressBookAppDevelopmentApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-08 14:07:06 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-08 14:07:06 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-08 14:07:08 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-08 14:07:08 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 86 ms. Found 1 JPA repository interface.
+2025-03-08 14:07:09 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-03-08 14:07:09 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-08 14:07:09 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-08 14:07:09 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-08 14:07:09 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2588 ms
+2025-03-08 14:07:09 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-08 14:07:09 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.9.Final
+2025-03-08 14:07:09 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-08 14:07:10 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-08 14:07:10 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-08 14:07:10 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3efdf7dd
+2025-03-08 14:07:10 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-08 14:07:10 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-08 14:07:10 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-08 14:07:10 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-08 14:07:12 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-08 14:07:12 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-08 14:07:12 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-08 14:07:13 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/addressbook_db'
+2025-03-08 14:07:13 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-08 14:07:13 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-03-08 14:07:13 [restartedMain] INFO  c.e.S.SpringAddressBookAppDevelopmentApplication - Started SpringAddressBookAppDevelopmentApplication in 7.814 seconds (process running for 9.084)
+2025-03-08 14:08:54 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-08 14:08:54 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-08 14:08:54 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2025-03-08 14:08:54 [http-nio-8080-exec-2] INFO  c.e.S.c.AddressBookController - Fetching all contacts
+2025-03-08 14:08:54 [http-nio-8080-exec-2] INFO  c.e.S.service.AddressBookService - Fetching all contacts
+2025-03-08 14:09:07 [http-nio-8080-exec-3] INFO  c.e.S.c.AddressBookController - Fetching contact with ID: 1
+2025-03-08 14:09:07 [http-nio-8080-exec-3] INFO  c.e.S.service.AddressBookService - Fetching contact with ID: 1
+2025-03-08 14:09:07 [http-nio-8080-exec-3] WARN  c.e.S.service.AddressBookService - Contact with ID 1 not found
+2025-03-08 14:09:15 [http-nio-8080-exec-4] INFO  c.e.S.c.AddressBookController - Adding new contact: com.example.SpringAddressBookAppDevelopment.model.Contact@25bcf4cb
+2025-03-08 14:09:15 [http-nio-8080-exec-4] INFO  c.e.S.service.AddressBookService - Adding new contact: com.example.SpringAddressBookAppDevelopment.model.Contact@25bcf4cb
+2025-03-08 14:09:37 [http-nio-8080-exec-5] INFO  c.e.S.c.AddressBookController - Adding new contact: com.example.SpringAddressBookAppDevelopment.model.Contact@9bc89e2
+2025-03-08 14:09:37 [http-nio-8080-exec-5] INFO  c.e.S.service.AddressBookService - Adding new contact: com.example.SpringAddressBookAppDevelopment.model.Contact@9bc89e2
+2025-03-08 14:09:42 [http-nio-8080-exec-6] INFO  c.e.S.c.AddressBookController - Fetching contact with ID: 1
+2025-03-08 14:09:42 [http-nio-8080-exec-6] INFO  c.e.S.service.AddressBookService - Fetching contact with ID: 1
+2025-03-08 14:10:10 [http-nio-8080-exec-7] INFO  c.e.S.c.AddressBookController - Adding new contact: com.example.SpringAddressBookAppDevelopment.model.Contact@43c26b5c
+2025-03-08 14:10:10 [http-nio-8080-exec-7] INFO  c.e.S.service.AddressBookService - Adding new contact: com.example.SpringAddressBookAppDevelopment.model.Contact@43c26b5c
+2025-03-08 14:10:17 [http-nio-8080-exec-8] INFO  c.e.S.c.AddressBookController - Fetching contact with ID: 2
+2025-03-08 14:10:17 [http-nio-8080-exec-8] INFO  c.e.S.service.AddressBookService - Fetching contact with ID: 2
+2025-03-08 14:12:05 [http-nio-8080-exec-10] INFO  c.e.S.c.AddressBookController - Fetching contact with ID: 1
+2025-03-08 14:12:05 [http-nio-8080-exec-10] INFO  c.e.S.service.AddressBookService - Fetching contact with ID: 1
+2025-03-08 14:18:13 [http-nio-8080-exec-2] INFO  c.e.S.c.AddressBookController - Fetching contact with ID: 2
+2025-03-08 14:18:13 [http-nio-8080-exec-2] INFO  c.e.S.service.AddressBookService - Fetching contact with ID: 2
+2025-03-08 14:19:03 [http-nio-8080-exec-3] INFO  c.e.S.c.AddressBookController - Deleting contact with ID: 2
+2025-03-08 14:19:03 [http-nio-8080-exec-3] INFO  c.e.S.service.AddressBookService - Deleting contact with ID: 2
