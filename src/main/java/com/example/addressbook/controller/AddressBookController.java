@@ -1,9 +1,9 @@
 package com.example.addressbook.controller;
 
-import com.example.addressbook.service.IAddressBookService;
 import com.example.addressbook.dto.AddressBookDTO;
+import com.example.addressbook.model.AddressBookEntry;
+import com.example.addressbook.service.IAddressBookService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,28 +16,28 @@ public class AddressBookController {
     private IAddressBookService addressBookService;
 
     @GetMapping
-    public ResponseEntity<List<AddressBookDTO>> getAllContacts() {
-        return ResponseEntity.ok(addressBookService.getAllContacts());
+    public List<AddressBookEntry> getAllContacts() {
+        return addressBookService.getAllContacts();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<AddressBookDTO> getContactById(@PathVariable Long id) {
-        return ResponseEntity.ok(addressBookService.getContactById(id));
+    public AddressBookEntry getContactById(@PathVariable int id) {
+        return addressBookService.getContactById(id);
     }
 
     @PostMapping
-    public ResponseEntity<AddressBookDTO> addContact(@RequestBody AddressBookDTO addressBookDTO) {
-        return ResponseEntity.ok(addressBookService.addContact(addressBookDTO));
+    public AddressBookEntry addContact(@RequestBody AddressBookDTO addressBookDTO) {
+        return addressBookService.addContact(addressBookDTO);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<AddressBookDTO> updateContact(@PathVariable Long id, @RequestBody AddressBookDTO addressBookDTO) {
-        return ResponseEntity.ok(addressBookService.updateContact(id, addressBookDTO));
+    public AddressBookEntry updateContact(@PathVariable int id, @RequestBody AddressBookDTO addressBookDTO) {
+        return addressBookService.updateContact(id, addressBookDTO);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteContact(@PathVariable Long id) {
+    public String deleteContact(@PathVariable int id) {
         addressBookService.deleteContact(id);
-        return ResponseEntity.noContent().build();
+        return "Contact deleted successfully!";
     }
 }

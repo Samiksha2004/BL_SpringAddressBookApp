@@ -2,52 +2,63 @@ package com.example.addressbook.service;
 
 import com.example.addressbook.dto.AddressBookDTO;
 import com.example.addressbook.model.AddressBookEntry;
-import com.example.addressbook.repository.AddressBookRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Optional;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @Service
 public class AddressBookService implements IAddressBookService {
-
-    @Autowired
-    private AddressBookRepository addressBookRepository;
+    private final List<AddressBookEntry> contactList = new ArrayList<>();
+    private final AtomicInteger idCounter = new AtomicInteger(1);
 
     @Override
-    public List<AddressBookDTO> getAllContacts() {
-        return addressBookRepository.findAll()
-                .stream()
-                .map(AddressBookDTO::new)
-                .collect(Collectors.toList());
+    public List<AddressBookEntry> getAllContacts() {
+        return contactList;
     }
 
     @Override
-    public AddressBookDTO getContactById(Long id) {
-        AddressBookEntry contact = addressBookRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Contact not found"));
-        return new AddressBookDTO(contact);
+    public AddressBookEntry getContactById(int id) {
+        return contactList.stream()
+                .filter(contact -> contact.getId() == id)
+                .findFirst()
+                .orElse(null);
     }
 
     @Override
-    public AddressBookDTO addContact(AddressBookDTO addressBookDTO) {
-        AddressBookEntry contact = new AddressBookEntry(addressBookDTO);
-        addressBookRepository.save(contact);
-        return new AddressBookDTO(contact);
+    public AddressBookEntry addContact(AddressBookDTO addressBookDTO) {
+        AddressBookEntry newContact = new AddressBookEntry(
+                (long)idCounter.getAndIncrement(),
+                addressBookDTO.getName(),
+                addressBookDTO.getEmail(),
+                addressBookDTO.getPhone(),
+                addressBookDTO.getAddress()  // ✅ Address is now stored
+        );
+        contactList.add(newContact);
+        return newContact;
     }
 
     @Override
-    public AddressBookDTO updateContact(Long id, AddressBookDTO addressBookDTO) {
-        AddressBookEntry contact = addressBookRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Contact not found"));
-        contact.update(addressBookDTO);
-        addressBookRepository.save(contact);
-        return new AddressBookDTO(contact);
+    public AddressBookEntry updateContact(int id, AddressBookDTO addressBookDTO) {
+        Optional<AddressBookEntry> contactOpt = contactList.stream()
+                .filter(contact -> contact.getId() == id)
+                .findFirst();
+
+        if (contactOpt.isPresent()) {
+            AddressBookEntry contact = contactOpt.get();
+            contact.setName(addressBookDTO.getName());
+            contact.setEmail(addressBookDTO.getEmail());
+            contact.setPhone(addressBookDTO.getPhone());
+            contact.setAddress(addressBookDTO.getAddress());  // ✅ Address is now updated
+            return contact;
+        }
+        return null;
     }
 
     @Override
-    public void deleteContact(Long id) {
-        addressBookRepository.deleteById(id);
+    public void deleteContact(int id) {
+        contactList.removeIf(contact -> contact.getId() == id);
     }
 }

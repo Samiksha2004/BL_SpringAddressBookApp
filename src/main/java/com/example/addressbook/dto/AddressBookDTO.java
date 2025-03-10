@@ -6,13 +6,15 @@ public class AddressBookDTO {
     private String name;
     private String email;
     private String phone;
+    private String address;  // ✅ Added Address Field
 
     public AddressBookDTO() {} // Default Constructor
 
-    public AddressBookDTO(String name, String email, String phone) {
+    public AddressBookDTO(String name, String email, String phone, String address) {
         this.name = name;
         this.email = email;
         this.phone = phone;
+        this.address = address;  // ✅ Fixed: address field initialized
     }
 
     // Constructor to map from Entity to DTO
@@ -20,9 +22,10 @@ public class AddressBookDTO {
         this.name = entry.getName();
         this.email = entry.getEmail();
         this.phone = entry.getPhone();
+        this.address = entry.getAddress();
     }
 
-    // Manually added Getters
+    // ✅ Getters
     public String getName() {
         return name;
     }
@@ -33,5 +36,9 @@ public class AddressBookDTO {
 
     public String getPhone() {
         return phone;
+    }
+
+    public String getAddress() {
+        return address;
     }
 }
