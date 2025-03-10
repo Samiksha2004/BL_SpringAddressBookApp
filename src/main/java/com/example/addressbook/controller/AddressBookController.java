@@ -13,15 +13,17 @@ import java.util.List;
 public class AddressBookController {
 
     @Autowired
-    private AddressBookService service;
+    private AddressBookService addressBookService;
 
     @GetMapping
     public ResponseEntity<List<AddressBookDTO>> getAllEntries() {
-        return ResponseEntity.ok(service.getAllEntries());
+        List<AddressBookDTO> entries = addressBookService.getAllEntries();
+        return ResponseEntity.ok(entries);
     }
 
     @PostMapping
     public ResponseEntity<AddressBookDTO> createEntry(@RequestBody AddressBookDTO dto) {
-        return ResponseEntity.ok(service.createEntry(dto));
+        AddressBookDTO savedEntry = addressBookService.createEntry(dto);
+        return ResponseEntity.ok(savedEntry);
     }
 }
