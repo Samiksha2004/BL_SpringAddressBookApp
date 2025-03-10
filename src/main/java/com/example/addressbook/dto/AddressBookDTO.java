@@ -1,20 +1,21 @@
-package com.example.addressbook.model;
+package com.example.addressbook.dto;
 
-import jakarta.persistence.*;
-
-@Entity
-public class AddressBookEntry {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class AddressBookDTO {
     private String name;
     private String email;
     private String phoneNumber;
 
-    public AddressBookEntry() {}
+    // Default constructor (required for JSON serialization)
+    public AddressBookDTO() {}
 
+    // Parameterized constructor
+    public AddressBookDTO(String name, String email, String phoneNumber) {
+        this.name = name;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
 
+    // Getters and Setters
     public String getName() {
         return name;
     }
