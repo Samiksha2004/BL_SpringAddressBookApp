@@ -1,42 +1,37 @@
 package com.example.addressbook.dto;
 
+import com.example.addressbook.model.AddressBookEntry;
+
 public class AddressBookDTO {
     private String name;
     private String email;
-    private String phoneNumber;
+    private String phone;
 
-    // Default constructor (required for JSON serialization)
-    public AddressBookDTO() {}
+    public AddressBookDTO() {} // Default Constructor
 
-    // Parameterized constructor
-    public AddressBookDTO(String name, String email, String phoneNumber) {
+    public AddressBookDTO(String name, String email, String phone) {
         this.name = name;
         this.email = email;
-        this.phoneNumber = phoneNumber;
+        this.phone = phone;
     }
 
-    // Getters and Setters
+    // Constructor to map from Entity to DTO
+    public AddressBookDTO(AddressBookEntry entry) {
+        this.name = entry.getName();
+        this.email = entry.getEmail();
+        this.phone = entry.getPhone();
+    }
+
+    // Manually added Getters
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public String getPhone() {
+        return phone;
     }
 }
