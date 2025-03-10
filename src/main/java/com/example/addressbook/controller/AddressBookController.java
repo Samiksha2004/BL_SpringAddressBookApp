@@ -30,6 +30,12 @@ public class AddressBookController {
         return ResponseEntity.ok(service.getEntryById(id));
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<AddressBookEntry> updateEntry(@PathVariable Long id, @RequestBody AddressBookEntry entry) {
+        AddressBookEntry updatedEntry = service.updateEntry(id, entry);
+        return updatedEntry != null ? ResponseEntity.ok(updatedEntry) : ResponseEntity.notFound().build();
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteEntry(@PathVariable Long id) {
         service.deleteEntry(id);
