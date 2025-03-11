@@ -13,12 +13,12 @@ public class AddressBookEntry {
     private String name;
     private String email;
     private String phone;
-    private String address;  // ✅ Added Address Field
+    private String address;  // Added Address Field
 
-    // ✅ Default Constructor (Required for JPA)
+    //Default Constructor (Required for JPA)
     public AddressBookEntry() {}
 
-    // ✅ Constructor for creating a new entry (WITH ID)
+    //Constructor for creating a new entry (WITH ID)
     public AddressBookEntry(Long id, String name, String email, String phone, String address) {
         this.id = id;
         this.name = name;
@@ -27,7 +27,7 @@ public class AddressBookEntry {
         this.address = address;
     }
 
-    // ✅ Constructor for DTO to Entity Conversion (without ID)
+    // Constructor for DTO to Entity Conversion (without ID)
     public AddressBookEntry(com.example.addressbook.dto.AddressBookDTO dto) {
         this.name = dto.getName();
         this.email = dto.getEmail();
@@ -35,7 +35,7 @@ public class AddressBookEntry {
         this.address = dto.getAddress();
     }
 
-    // ✅ Setter Methods (Fixes 'Cannot resolve method' errors)
+    // Setter Methods (Fixes 'Cannot resolve method' errors)
     public void setName(String name) {
         this.name = name;
     }
@@ -52,7 +52,7 @@ public class AddressBookEntry {
         this.address = address;
     }
 
-    // ✅ Getter Methods
+    //Getter Methods
     public Long getId() {
         return id;
     }

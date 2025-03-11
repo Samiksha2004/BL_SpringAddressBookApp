@@ -34,7 +34,7 @@ public class AddressBookService implements IAddressBookService {
                 addressBookDTO.getName(),
                 addressBookDTO.getEmail(),
                 addressBookDTO.getPhone(),
-                addressBookDTO.getAddress()  // ✅ Address is now stored
+                addressBookDTO.getAddress()
         );
         contactList.add(newContact);
         return newContact;
@@ -51,7 +51,7 @@ public class AddressBookService implements IAddressBookService {
             contact.setName(addressBookDTO.getName());
             contact.setEmail(addressBookDTO.getEmail());
             contact.setPhone(addressBookDTO.getPhone());
-            contact.setAddress(addressBookDTO.getAddress());  // ✅ Address is now updated
+            contact.setAddress(addressBookDTO.getAddress());
             return contact;
         }
         return null;
