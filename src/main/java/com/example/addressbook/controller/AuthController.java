@@ -1,54 +1,68 @@
 package com.example.addressbook.controller;
 
-import com.example.addressbook.dto.UserDTO;
-import com.example.addressbook.model.User;
 import com.example.addressbook.service.UserService;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import com.example.addressbook.dto.UserDTO;
+
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/auth")
+@RequiredArgsConstructor
+@Slf4j
+@CrossOrigin(origins = "*")
 public class AuthController {
+
     private final UserService userService;
 
-    public AuthController(UserService userService) {
-        this.userService = userService;
-    }
-
-    // User Registration API
+    // UC1 - Register API
     @PostMapping("/register")
-    public UserDTO register(@RequestBody UserRequest request) {
-        return userService.registerUser(request.getUsername(), request.getPassword());
+    public ResponseEntity<UserDTO> register(@RequestBody Map<String, String> request) {
+        String username = request.get("username");
+        String email = request.get("email");
+        String password = request.get("password");
+        UserDTO userDTO = userService.registerUser(username, email, password);
+        return ResponseEntity.ok(userDTO);
     }
 
-    // User Login API
+    // UC1 - Login API
     @PostMapping("/login")
-    public UserDTO login(@RequestBody UserRequest request) {
-        return userService.loginUser(request.getUsername(), request.getPassword());
+    public ResponseEntity<UserDTO> login(@RequestBody Map<String, String> request) {
+        log.info("Login API hit for user: {}", request.get("username"));
+        String username = request.get("username");
+        String password = request.get("password");
+        UserDTO userDTO = userService.loginUser(username, password);
+        return ResponseEntity.ok(userDTO);
     }
 
-    //Get User Profile API (Requires JWT Token)
-    @GetMapping("/profile")
-    public UserDTO getUserProfile() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        String username = authentication.getName();
+    // UC2 - Forgot Password API
+    @PostMapping("/forgot-password")
+    public ResponseEntity<?> forgotPassword(@RequestBody Map<String, String> request) {
+        String username = request.get("username");
+        String resetToken = userService.generateResetToken(username);
 
-        User user = userService.getUserByUsername(username);
-        return new UserDTO(user.getUsername(), "Profile fetched successfully!");
+        Map<String, String> response = Map.of(
+                "message", "Reset token generated successfully",
+                "resetToken", resetToken
+        );
+
+        return ResponseEntity.ok(response);
     }
 
-    // Inner static class for request body
-    static class UserRequest {
-        private String username;
-        private String password;
+    // UC2 - Reset Password API
+    @PostMapping("/reset-password")
+    public ResponseEntity<?> resetPassword(@RequestBody Map<String, String> request) {
+        String token = request.get("token");
+        String newPassword = request.get("newPassword");
+        userService.resetPassword(token, newPassword);
 
-        public String getUsername() {
-            return username;
-        }
+        Map<String, String> response = Map.of(
+                "message", "Password has been reset successfully"
+        );
 
-        public String getPassword() {
-            return password;
-        }
+        return ResponseEntity.ok(response);
     }
 }
