@@ -26923,3 +26923,407 @@ Unconditional classes:
 2025-03-17T22:18:49.992+05:30 DEBUG 46237 --- [Address Book] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
 2025-03-17T22:18:49.994+05:30 DEBUG 46237 --- [Address Book] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/reset-password
 2025-03-17T22:18:50.194+05:30  INFO 46237 --- [Address Book] [http-nio-8080-exec-5] c.e.addressbook.service.UserService      : Password reset successful for user: Shishankii
+2025-03-20T00:44:53.748+05:30  INFO 6964 --- [Address Book] [restartedMain] c.e.addressbook.AddressBookApplication   : Starting AddressBookApplication using Java 17.0.9 with PID 6964 (/Users/samikshathakur/Documents/Capgemini/BL_SpringAddressBookApp/target/classes started by samikshathakur in /Users/samikshathakur/Documents/Capgemini/BL_SpringAddressBookApp)
+2025-03-20T00:44:53.750+05:30 DEBUG 6964 --- [Address Book] [restartedMain] c.e.addressbook.AddressBookApplication   : Running with Spring Boot v3.5.0-SNAPSHOT, Spring v6.2.5-SNAPSHOT
+2025-03-20T00:44:53.750+05:30  INFO 6964 --- [Address Book] [restartedMain] c.e.addressbook.AddressBookApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-03-20T00:44:53.782+05:30  INFO 6964 --- [Address Book] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-20T00:44:53.782+05:30  INFO 6964 --- [Address Book] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-20T00:44:54.172+05:30  INFO 6964 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-20T00:44:54.202+05:30  INFO 6964 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
+2025-03-20T00:44:54.776+05:30  INFO 6964 --- [Address Book] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-20T00:44:54.784+05:30  INFO 6964 --- [Address Book] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-20T00:44:54.784+05:30  INFO 6964 --- [Address Book] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-03-20T00:44:54.805+05:30  INFO 6964 --- [Address Book] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-20T00:44:54.805+05:30  INFO 6964 --- [Address Book] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1023 ms
+2025-03-20T00:44:54.956+05:30  INFO 6964 --- [Address Book] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-20T00:44:55.006+05:30  INFO 6964 --- [Address Book] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-03-20T00:44:55.030+05:30  INFO 6964 --- [Address Book] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-20T00:44:55.204+05:30  INFO 6964 --- [Address Book] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-20T00:44:55.221+05:30  INFO 6964 --- [Address Book] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-20T00:44:55.550+05:30  INFO 6964 --- [Address Book] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@52ca9297
+2025-03-20T00:44:55.551+05:30  INFO 6964 --- [Address Book] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-20T00:44:55.625+05:30  WARN 6964 --- [Address Book] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-20T00:44:55.626+05:30  WARN 6964 --- [Address Book] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-20T00:44:55.634+05:30  INFO 6964 --- [Address Book] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-20T00:44:56.065+05:30  INFO 6964 --- [Address Book] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-20T00:44:56.153+05:30  INFO 6964 --- [Address Book] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-20T00:44:56.330+05:30 DEBUG 6964 --- [Address Book] [restartedMain] c.e.a.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-03-20T00:44:56.356+05:30  WARN 6964 --- [Address Book] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Found 2 UserDetailsService beans, with names [customUserDetailsService, userDetailsService]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2025-03-20T00:44:56.356+05:30 DEBUG 6964 --- [Address Book] [restartedMain] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-03-20T00:44:56.386+05:30  WARN 6964 --- [Address Book] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-20T00:44:56.619+05:30  INFO 6964 --- [Address Book] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-03-20T00:44:56.651+05:30 DEBUG 6964 --- [Address Book] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-20T00:44:56.844+05:30  INFO 6964 --- [Address Book] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-03-20T00:44:56.895+05:30  INFO 6964 --- [Address Book] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-20T00:44:56.909+05:30  INFO 6964 --- [Address Book] [restartedMain] c.e.addressbook.AddressBookApplication   : Started AddressBookApplication in 3.414 seconds (process running for 3.849)
+2025-03-20T00:45:38.335+05:30  INFO 6964 --- [Address Book] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-20T00:45:38.336+05:30  INFO 6964 --- [Address Book] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-20T00:45:38.343+05:30  INFO 6964 --- [Address Book] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2025-03-20T00:45:38.362+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-03-20T00:45:38.371+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T00:45:38.376+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-03-20T00:45:38.422+05:30  INFO 6964 --- [Address Book] [http-nio-8080-exec-2] c.e.a.controller.AuthController          : Login API hit for user: Shivangi
+2025-03-20T00:45:46.294+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-03-20T00:45:46.300+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T00:45:46.302+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-03-20T00:45:46.321+05:30  INFO 6964 --- [Address Book] [http-nio-8080-exec-3] c.e.a.controller.AuthController          : Login API hit for user: john
+2025-03-20T00:45:46.429+05:30  WARN 6964 --- [Address Book] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: Invalid credentials]
+2025-03-20T00:45:51.535+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/reset-password
+2025-03-20T00:45:51.537+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T00:45:51.539+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/reset-password
+2025-03-20T00:45:51.553+05:30  WARN 6964 --- [Address Book] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: Invalid reset token]
+2025-03-20T00:46:03.453+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-03-20T00:46:03.456+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T00:46:03.458+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-03-20T00:46:03.461+05:30  INFO 6964 --- [Address Book] [http-nio-8080-exec-7] c.e.a.controller.AuthController          : Login API hit for user: john
+2025-03-20T00:46:08.562+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
+2025-03-20T00:46:08.566+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T00:46:08.568+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
+2025-03-20T00:46:13.036+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
+2025-03-20T00:46:13.039+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T00:46:13.040+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
+2025-03-20T00:46:20.620+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/forgot-password
+2025-03-20T00:46:20.622+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T00:46:20.625+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/forgot-password
+2025-03-20T00:46:20.647+05:30  WARN 6964 --- [Address Book] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.IncorrectResultSizeDataAccessException: Query did not return a unique result: 2 results were returned]
+2025-03-20T00:46:29.091+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/forgot-password
+2025-03-20T00:46:29.096+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T00:46:29.098+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/forgot-password
+2025-03-20T00:46:29.131+05:30  WARN 6964 --- [Address Book] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: User not found]
+2025-03-20T00:46:46.166+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-03-20T00:46:46.169+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T00:46:46.171+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-03-20T00:46:46.178+05:30  INFO 6964 --- [Address Book] [http-nio-8080-exec-4] c.e.a.controller.AuthController          : Login API hit for user: Shishankii jadaun
+2025-03-20T00:46:46.200+05:30  WARN 6964 --- [Address Book] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: User not found]
+2025-03-20T00:46:54.634+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
+2025-03-20T00:46:54.637+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T00:46:54.638+05:30 DEBUG 6964 --- [Address Book] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
+2025-03-20T01:10:24.673+05:30  INFO 6964 --- [Address Book] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-20T01:10:24.681+05:30  INFO 6964 --- [Address Book] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-20T01:10:24.689+05:30  INFO 6964 --- [Address Book] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-20T01:10:24.698+05:30  INFO 6964 --- [Address Book] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-20T01:10:24.704+05:30  INFO 6964 --- [Address Book] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-20T01:10:27.922+05:30  INFO 7628 --- [Address Book] [restartedMain] c.e.addressbook.AddressBookApplication   : Starting AddressBookApplication using Java 17.0.9 with PID 7628 (/Users/samikshathakur/Documents/Capgemini/BL_SpringAddressBookApp/target/classes started by samikshathakur in /Users/samikshathakur/Documents/Capgemini/BL_SpringAddressBookApp)
+2025-03-20T01:10:27.923+05:30 DEBUG 7628 --- [Address Book] [restartedMain] c.e.addressbook.AddressBookApplication   : Running with Spring Boot v3.5.0-SNAPSHOT, Spring v6.2.5-SNAPSHOT
+2025-03-20T01:10:27.924+05:30  INFO 7628 --- [Address Book] [restartedMain] c.e.addressbook.AddressBookApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-03-20T01:10:27.962+05:30  INFO 7628 --- [Address Book] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-20T01:10:27.962+05:30  INFO 7628 --- [Address Book] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-20T01:10:28.355+05:30  INFO 7628 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-20T01:10:28.355+05:30  INFO 7628 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-20T01:10:28.437+05:30  INFO 7628 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 2 JPA repository interfaces.
+2025-03-20T01:10:28.638+05:30  INFO 7628 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-20T01:10:28.639+05:30  INFO 7628 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-03-20T01:10:28.656+05:30  INFO 7628 --- [Address Book] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.addressbook.repository.AddressBookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-03-20T01:10:28.657+05:30  INFO 7628 --- [Address Book] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.addressbook.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-03-20T01:10:28.657+05:30  INFO 7628 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2025-03-20T01:10:29.110+05:30  INFO 7628 --- [Address Book] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-20T01:10:29.118+05:30  INFO 7628 --- [Address Book] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-20T01:10:29.118+05:30  INFO 7628 --- [Address Book] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-03-20T01:10:29.152+05:30  INFO 7628 --- [Address Book] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-20T01:10:29.153+05:30  INFO 7628 --- [Address Book] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1191 ms
+2025-03-20T01:10:29.486+05:30  INFO 7628 --- [Address Book] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-20T01:10:29.544+05:30  INFO 7628 --- [Address Book] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-03-20T01:10:29.587+05:30  INFO 7628 --- [Address Book] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-20T01:10:29.807+05:30  INFO 7628 --- [Address Book] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-20T01:10:29.825+05:30  INFO 7628 --- [Address Book] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-20T01:10:30.032+05:30  INFO 7628 --- [Address Book] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@afa64c4
+2025-03-20T01:10:30.033+05:30  INFO 7628 --- [Address Book] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-20T01:10:30.088+05:30  WARN 7628 --- [Address Book] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-20T01:10:30.088+05:30  WARN 7628 --- [Address Book] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-20T01:10:30.099+05:30  INFO 7628 --- [Address Book] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-20T01:10:30.562+05:30  INFO 7628 --- [Address Book] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-20T01:10:30.642+05:30  INFO 7628 --- [Address Book] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-20T01:10:30.834+05:30 DEBUG 7628 --- [Address Book] [restartedMain] c.e.a.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-03-20T01:10:30.862+05:30  WARN 7628 --- [Address Book] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Found 2 UserDetailsService beans, with names [customUserDetailsService, userDetailsService]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2025-03-20T01:10:30.862+05:30 DEBUG 7628 --- [Address Book] [restartedMain] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-03-20T01:10:31.056+05:30  WARN 7628 --- [Address Book] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-20T01:10:31.330+05:30  INFO 7628 --- [Address Book] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-03-20T01:10:31.365+05:30 DEBUG 7628 --- [Address Book] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-20T01:10:31.623+05:30  INFO 7628 --- [Address Book] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-03-20T01:10:31.662+05:30  INFO 7628 --- [Address Book] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-20T01:10:31.677+05:30  INFO 7628 --- [Address Book] [restartedMain] c.e.addressbook.AddressBookApplication   : Started AddressBookApplication in 4.062 seconds (process running for 4.338)
+2025-03-20T01:16:09.225+05:30  INFO 7628 --- [Address Book] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-20T01:16:09.240+05:30  INFO 7628 --- [Address Book] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-20T01:16:09.368+05:30  INFO 7628 --- [Address Book] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-20T01:16:09.375+05:30  INFO 7628 --- [Address Book] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-20T01:16:09.387+05:30  INFO 7628 --- [Address Book] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-20T01:16:10.829+05:30  INFO 7815 --- [Address Book] [restartedMain] c.e.addressbook.AddressBookApplication   : Starting AddressBookApplication using Java 17.0.9 with PID 7815 (/Users/samikshathakur/Documents/Capgemini/BL_SpringAddressBookApp/target/classes started by samikshathakur in /Users/samikshathakur/Documents/Capgemini/BL_SpringAddressBookApp)
+2025-03-20T01:16:10.830+05:30 DEBUG 7815 --- [Address Book] [restartedMain] c.e.addressbook.AddressBookApplication   : Running with Spring Boot v3.5.0-SNAPSHOT, Spring v6.2.5-SNAPSHOT
+2025-03-20T01:16:10.831+05:30  INFO 7815 --- [Address Book] [restartedMain] c.e.addressbook.AddressBookApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-03-20T01:16:10.870+05:30  INFO 7815 --- [Address Book] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-20T01:16:10.870+05:30  INFO 7815 --- [Address Book] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-20T01:16:11.273+05:30  INFO 7815 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-20T01:16:11.273+05:30  INFO 7815 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-20T01:16:11.352+05:30  INFO 7815 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 2 JPA repository interfaces.
+2025-03-20T01:16:11.532+05:30  INFO 7815 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-20T01:16:11.533+05:30  INFO 7815 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-03-20T01:16:11.548+05:30  INFO 7815 --- [Address Book] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.addressbook.repository.AddressBookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-03-20T01:16:11.548+05:30  INFO 7815 --- [Address Book] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.addressbook.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-03-20T01:16:11.548+05:30  INFO 7815 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2025-03-20T01:16:12.037+05:30  INFO 7815 --- [Address Book] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-20T01:16:12.044+05:30  INFO 7815 --- [Address Book] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-20T01:16:12.045+05:30  INFO 7815 --- [Address Book] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-03-20T01:16:12.067+05:30  INFO 7815 --- [Address Book] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-20T01:16:12.067+05:30  INFO 7815 --- [Address Book] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1196 ms
+2025-03-20T01:16:12.242+05:30  INFO 7815 --- [Address Book] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-20T01:16:12.288+05:30  INFO 7815 --- [Address Book] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-03-20T01:16:12.310+05:30  INFO 7815 --- [Address Book] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-20T01:16:12.466+05:30  INFO 7815 --- [Address Book] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-20T01:16:12.483+05:30  INFO 7815 --- [Address Book] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-20T01:16:12.736+05:30  INFO 7815 --- [Address Book] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@583bb466
+2025-03-20T01:16:12.737+05:30  INFO 7815 --- [Address Book] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-20T01:16:12.798+05:30  WARN 7815 --- [Address Book] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-20T01:16:12.798+05:30  WARN 7815 --- [Address Book] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-20T01:16:12.810+05:30  INFO 7815 --- [Address Book] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-20T01:16:13.286+05:30  INFO 7815 --- [Address Book] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-20T01:16:13.395+05:30  INFO 7815 --- [Address Book] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-20T01:16:13.602+05:30 DEBUG 7815 --- [Address Book] [restartedMain] c.e.a.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-03-20T01:16:13.635+05:30  WARN 7815 --- [Address Book] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Found 2 UserDetailsService beans, with names [customUserDetailsService, userDetailsService]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2025-03-20T01:16:13.635+05:30 DEBUG 7815 --- [Address Book] [restartedMain] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-03-20T01:16:13.827+05:30  WARN 7815 --- [Address Book] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-20T01:16:14.092+05:30  INFO 7815 --- [Address Book] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-03-20T01:16:14.126+05:30 DEBUG 7815 --- [Address Book] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-20T01:16:14.400+05:30  INFO 7815 --- [Address Book] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-03-20T01:16:14.441+05:30  INFO 7815 --- [Address Book] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-20T01:16:14.456+05:30  INFO 7815 --- [Address Book] [restartedMain] c.e.addressbook.AddressBookApplication   : Started AddressBookApplication in 3.915 seconds (process running for 4.308)
+2025-03-20T01:17:41.439+05:30  INFO 7815 --- [Address Book] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-20T01:17:41.439+05:30  INFO 7815 --- [Address Book] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-20T01:17:41.442+05:30  INFO 7815 --- [Address Book] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-03-20T01:17:41.460+05:30 DEBUG 7815 --- [Address Book] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /contacts
+2025-03-20T01:17:41.468+05:30 DEBUG 7815 --- [Address Book] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T01:17:41.473+05:30 DEBUG 7815 --- [Address Book] [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-03-20T01:17:41.478+05:30 DEBUG 7815 --- [Address Book] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-03-20T01:17:41.479+05:30 DEBUG 7815 --- [Address Book] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T01:17:41.479+05:30 DEBUG 7815 --- [Address Book] [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-03-20T01:21:07.684+05:30 DEBUG 7815 --- [Address Book] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/addressbook
+2025-03-20T01:21:07.689+05:30 DEBUG 7815 --- [Address Book] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T01:21:07.692+05:30 DEBUG 7815 --- [Address Book] [http-nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-03-20T01:21:07.696+05:30 DEBUG 7815 --- [Address Book] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-03-20T01:21:07.698+05:30 DEBUG 7815 --- [Address Book] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T01:21:07.698+05:30 DEBUG 7815 --- [Address Book] [http-nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-03-20T01:21:30.458+05:30 DEBUG 7815 --- [Address Book] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/addressbook
+2025-03-20T01:21:30.460+05:30 DEBUG 7815 --- [Address Book] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T01:21:30.466+05:30 DEBUG 7815 --- [Address Book] [http-nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-03-20T01:21:30.468+05:30 DEBUG 7815 --- [Address Book] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-03-20T01:21:30.469+05:30 DEBUG 7815 --- [Address Book] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T01:21:30.470+05:30 DEBUG 7815 --- [Address Book] [http-nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-03-20T01:23:26.832+05:30  INFO 7815 --- [Address Book] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-20T01:23:26.839+05:30  INFO 7815 --- [Address Book] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-20T01:23:26.963+05:30  INFO 7815 --- [Address Book] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-20T01:23:26.967+05:30  INFO 7815 --- [Address Book] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-20T01:23:26.973+05:30  INFO 7815 --- [Address Book] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-20T01:23:30.119+05:30  INFO 7974 --- [Address Book] [restartedMain] c.e.addressbook.AddressBookApplication   : Starting AddressBookApplication using Java 17.0.9 with PID 7974 (/Users/samikshathakur/Documents/Capgemini/BL_SpringAddressBookApp/target/classes started by samikshathakur in /Users/samikshathakur/Documents/Capgemini/BL_SpringAddressBookApp)
+2025-03-20T01:23:30.121+05:30 DEBUG 7974 --- [Address Book] [restartedMain] c.e.addressbook.AddressBookApplication   : Running with Spring Boot v3.5.0-SNAPSHOT, Spring v6.2.5-SNAPSHOT
+2025-03-20T01:23:30.122+05:30  INFO 7974 --- [Address Book] [restartedMain] c.e.addressbook.AddressBookApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-03-20T01:23:30.170+05:30  INFO 7974 --- [Address Book] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-20T01:23:30.170+05:30  INFO 7974 --- [Address Book] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-20T01:23:30.567+05:30  INFO 7974 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-20T01:23:30.567+05:30  INFO 7974 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-20T01:23:30.647+05:30  INFO 7974 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 2 JPA repository interfaces.
+2025-03-20T01:23:30.885+05:30  INFO 7974 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-20T01:23:30.886+05:30  INFO 7974 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-03-20T01:23:30.903+05:30  INFO 7974 --- [Address Book] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.addressbook.repository.AddressBookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-03-20T01:23:30.903+05:30  INFO 7974 --- [Address Book] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.addressbook.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-03-20T01:23:30.903+05:30  INFO 7974 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2025-03-20T01:23:31.411+05:30  INFO 7974 --- [Address Book] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-20T01:23:31.418+05:30  INFO 7974 --- [Address Book] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-20T01:23:31.419+05:30  INFO 7974 --- [Address Book] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-03-20T01:23:31.441+05:30  INFO 7974 --- [Address Book] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-20T01:23:31.441+05:30  INFO 7974 --- [Address Book] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1271 ms
+2025-03-20T01:23:31.607+05:30  INFO 7974 --- [Address Book] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-20T01:23:31.658+05:30  INFO 7974 --- [Address Book] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-03-20T01:23:31.680+05:30  INFO 7974 --- [Address Book] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-20T01:23:31.825+05:30  INFO 7974 --- [Address Book] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-20T01:23:31.839+05:30  INFO 7974 --- [Address Book] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-20T01:23:32.079+05:30  INFO 7974 --- [Address Book] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b8f29ce
+2025-03-20T01:23:32.079+05:30  INFO 7974 --- [Address Book] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-20T01:23:32.126+05:30  WARN 7974 --- [Address Book] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-20T01:23:32.127+05:30  WARN 7974 --- [Address Book] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-20T01:23:32.135+05:30  INFO 7974 --- [Address Book] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-20T01:23:32.578+05:30  INFO 7974 --- [Address Book] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-20T01:23:32.652+05:30  INFO 7974 --- [Address Book] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-20T01:23:32.871+05:30 DEBUG 7974 --- [Address Book] [restartedMain] c.e.a.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-03-20T01:23:32.898+05:30  WARN 7974 --- [Address Book] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Found 2 UserDetailsService beans, with names [customUserDetailsService, userDetailsService]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2025-03-20T01:23:32.899+05:30 DEBUG 7974 --- [Address Book] [restartedMain] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-03-20T01:23:33.078+05:30  WARN 7974 --- [Address Book] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-20T01:23:33.337+05:30  INFO 7974 --- [Address Book] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-03-20T01:23:33.371+05:30 DEBUG 7974 --- [Address Book] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-20T01:23:33.614+05:30  INFO 7974 --- [Address Book] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-03-20T01:23:33.660+05:30  INFO 7974 --- [Address Book] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-20T01:23:33.675+05:30  INFO 7974 --- [Address Book] [restartedMain] c.e.addressbook.AddressBookApplication   : Started AddressBookApplication in 3.891 seconds (process running for 4.174)
+2025-03-20T01:24:03.413+05:30  INFO 7974 --- [Address Book] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-20T01:24:03.414+05:30  INFO 7974 --- [Address Book] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-20T01:24:03.418+05:30  INFO 7974 --- [Address Book] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-03-20T01:24:03.439+05:30 DEBUG 7974 --- [Address Book] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/addressbook
+2025-03-20T01:24:03.446+05:30 DEBUG 7974 --- [Address Book] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T01:24:03.451+05:30 DEBUG 7974 --- [Address Book] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/addressbook
+2025-03-20T01:26:01.921+05:30 DEBUG 7974 --- [Address Book] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/addressbook
+2025-03-20T01:26:01.926+05:30 DEBUG 7974 --- [Address Book] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T01:26:01.927+05:30 DEBUG 7974 --- [Address Book] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/addressbook
+2025-03-20T01:26:24.311+05:30 DEBUG 7974 --- [Address Book] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/addressbook
+2025-03-20T01:26:24.317+05:30 DEBUG 7974 --- [Address Book] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T01:26:24.321+05:30 DEBUG 7974 --- [Address Book] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/addressbook
+2025-03-20T01:32:14.503+05:30  INFO 7974 --- [Address Book] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-20T01:32:14.512+05:30  INFO 7974 --- [Address Book] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-20T01:32:14.665+05:30  INFO 7974 --- [Address Book] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-20T01:32:14.669+05:30  INFO 7974 --- [Address Book] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-20T01:32:14.677+05:30  INFO 7974 --- [Address Book] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-20T01:36:07.808+05:30  INFO 8415 --- [Address Book] [restartedMain] c.e.addressbook.AddressBookApplication   : Starting AddressBookApplication using Java 17.0.9 with PID 8415 (/Users/samikshathakur/Documents/Capgemini/BL_SpringAddressBookApp/target/classes started by samikshathakur in /Users/samikshathakur/Documents/Capgemini/BL_SpringAddressBookApp)
+2025-03-20T01:36:07.809+05:30 DEBUG 8415 --- [Address Book] [restartedMain] c.e.addressbook.AddressBookApplication   : Running with Spring Boot v3.5.0-SNAPSHOT, Spring v6.2.5-SNAPSHOT
+2025-03-20T01:36:07.809+05:30  INFO 8415 --- [Address Book] [restartedMain] c.e.addressbook.AddressBookApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-03-20T01:36:07.845+05:30  INFO 8415 --- [Address Book] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-20T01:36:07.846+05:30  INFO 8415 --- [Address Book] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-20T01:36:08.237+05:30  INFO 8415 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-20T01:36:08.237+05:30  INFO 8415 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-20T01:36:08.313+05:30  INFO 8415 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 2 JPA repository interfaces.
+2025-03-20T01:36:08.507+05:30  INFO 8415 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-20T01:36:08.508+05:30  INFO 8415 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-03-20T01:36:08.528+05:30  INFO 8415 --- [Address Book] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.addressbook.repository.AddressBookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-03-20T01:36:08.529+05:30  INFO 8415 --- [Address Book] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.addressbook.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-03-20T01:36:08.529+05:30  INFO 8415 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2025-03-20T01:36:09.003+05:30  INFO 8415 --- [Address Book] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-20T01:36:09.011+05:30  INFO 8415 --- [Address Book] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-20T01:36:09.011+05:30  INFO 8415 --- [Address Book] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-03-20T01:36:09.033+05:30  INFO 8415 --- [Address Book] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-20T01:36:09.034+05:30  INFO 8415 --- [Address Book] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1188 ms
+2025-03-20T01:36:09.214+05:30  INFO 8415 --- [Address Book] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-20T01:36:09.256+05:30  INFO 8415 --- [Address Book] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-03-20T01:36:09.275+05:30  INFO 8415 --- [Address Book] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-20T01:36:09.418+05:30  INFO 8415 --- [Address Book] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-20T01:36:09.435+05:30  INFO 8415 --- [Address Book] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-20T01:36:09.699+05:30  INFO 8415 --- [Address Book] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@56ed8832
+2025-03-20T01:36:09.700+05:30  INFO 8415 --- [Address Book] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-20T01:36:09.750+05:30  WARN 8415 --- [Address Book] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-20T01:36:09.751+05:30  WARN 8415 --- [Address Book] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-20T01:36:09.760+05:30  INFO 8415 --- [Address Book] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-20T01:36:10.201+05:30  INFO 8415 --- [Address Book] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-20T01:36:10.270+05:30  INFO 8415 --- [Address Book] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-20T01:36:10.462+05:30 DEBUG 8415 --- [Address Book] [restartedMain] c.e.a.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-03-20T01:36:10.505+05:30  WARN 8415 --- [Address Book] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Found 2 UserDetailsService beans, with names [customUserDetailsService, userDetailsService]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2025-03-20T01:36:10.505+05:30 DEBUG 8415 --- [Address Book] [restartedMain] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-03-20T01:36:10.692+05:30  WARN 8415 --- [Address Book] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-20T01:36:10.951+05:30  INFO 8415 --- [Address Book] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-03-20T01:36:10.989+05:30 DEBUG 8415 --- [Address Book] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-20T01:36:11.258+05:30  INFO 8415 --- [Address Book] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-03-20T01:36:11.298+05:30  INFO 8415 --- [Address Book] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-20T01:36:11.313+05:30  INFO 8415 --- [Address Book] [restartedMain] c.e.addressbook.AddressBookApplication   : Started AddressBookApplication in 3.773 seconds (process running for 4.056)
+2025-03-20T01:36:36.067+05:30  INFO 8415 --- [Address Book] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-20T01:36:36.068+05:30  INFO 8415 --- [Address Book] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-20T01:36:36.072+05:30  INFO 8415 --- [Address Book] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-03-20T01:36:36.089+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/addressbook
+2025-03-20T01:36:36.095+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T01:36:36.099+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/addressbook
+2025-03-20T01:36:53.337+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/addressbook
+2025-03-20T01:36:53.343+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T01:36:53.345+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/addressbook
+2025-03-20T01:37:01.488+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/addressbook
+2025-03-20T01:37:01.490+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T01:37:01.492+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/addressbook
+2025-03-20T01:38:30.538+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/addressbook
+2025-03-20T01:38:30.543+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T01:38:30.546+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/addressbook
+2025-03-20T01:39:05.794+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/addressbook
+2025-03-20T01:39:05.799+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T01:39:05.801+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/addressbook
+2025-03-20T01:39:28.933+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/addressbook
+2025-03-20T01:39:28.936+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T01:39:28.938+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/addressbook
+2025-03-20T01:40:14.990+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/addressbook
+2025-03-20T01:40:14.995+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T01:40:14.996+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/addressbook
+2025-03-20T01:40:36.445+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing PUT /api/addressbook/1
+2025-03-20T01:40:36.449+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T01:40:36.451+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured PUT /api/addressbook/1
+2025-03-20T01:40:36.487+05:30  WARN 8415 --- [Address Book] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.example.addressbook.model.AddressBookEntry com.example.addressbook.controller.AddressBookController.updateContact(int,com.example.addressbook.dto.AddressBookDTO)]
+2025-03-20T01:40:52.477+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing PUT /api/addressbook/1
+2025-03-20T01:40:52.479+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T01:40:52.481+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured PUT /api/addressbook/1
+2025-03-20T01:41:19.277+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing DELETE /api/addressbook/1
+2025-03-20T01:41:19.282+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-20T01:41:19.284+05:30 DEBUG 8415 --- [Address Book] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured DELETE /api/addressbook/1
+2025-03-20T01:46:36.603+05:30  INFO 8415 --- [Address Book] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-20T01:46:36.607+05:30  INFO 8415 --- [Address Book] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-20T01:46:36.734+05:30  INFO 8415 --- [Address Book] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-20T01:46:36.739+05:30  INFO 8415 --- [Address Book] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-20T01:46:36.749+05:30  INFO 8415 --- [Address Book] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-20T01:46:41.134+05:30  INFO 8647 --- [Address Book] [restartedMain] c.e.addressbook.AddressBookApplication   : Starting AddressBookApplication using Java 17.0.9 with PID 8647 (/Users/samikshathakur/Documents/Capgemini/BL_SpringAddressBookApp/target/classes started by samikshathakur in /Users/samikshathakur/Documents/Capgemini/BL_SpringAddressBookApp)
+2025-03-20T01:46:41.136+05:30 DEBUG 8647 --- [Address Book] [restartedMain] c.e.addressbook.AddressBookApplication   : Running with Spring Boot v3.5.0-SNAPSHOT, Spring v6.2.5-SNAPSHOT
+2025-03-20T01:46:41.137+05:30  INFO 8647 --- [Address Book] [restartedMain] c.e.addressbook.AddressBookApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-03-20T01:46:41.179+05:30  INFO 8647 --- [Address Book] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-20T01:46:41.179+05:30  INFO 8647 --- [Address Book] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-20T01:46:41.634+05:30  INFO 8647 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-20T01:46:41.634+05:30  INFO 8647 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-20T01:46:41.714+05:30  INFO 8647 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 2 JPA repository interfaces.
+2025-03-20T01:46:41.981+05:30  INFO 8647 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-20T01:46:41.982+05:30  INFO 8647 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-03-20T01:46:41.998+05:30  INFO 8647 --- [Address Book] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.addressbook.repository.AddressBookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-03-20T01:46:41.999+05:30  INFO 8647 --- [Address Book] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.addressbook.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-03-20T01:46:41.999+05:30  INFO 8647 --- [Address Book] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2025-03-20T01:46:42.454+05:30  INFO 8647 --- [Address Book] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-20T01:46:42.461+05:30  INFO 8647 --- [Address Book] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-20T01:46:42.461+05:30  INFO 8647 --- [Address Book] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-03-20T01:46:42.481+05:30  INFO 8647 --- [Address Book] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-20T01:46:42.482+05:30  INFO 8647 --- [Address Book] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1303 ms
+2025-03-20T01:46:42.647+05:30  INFO 8647 --- [Address Book] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-20T01:46:42.690+05:30  INFO 8647 --- [Address Book] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-03-20T01:46:42.711+05:30  INFO 8647 --- [Address Book] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-20T01:46:42.856+05:30  INFO 8647 --- [Address Book] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-20T01:46:42.871+05:30  INFO 8647 --- [Address Book] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-20T01:46:43.115+05:30  INFO 8647 --- [Address Book] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@57a87b4b
+2025-03-20T01:46:43.116+05:30  INFO 8647 --- [Address Book] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-20T01:46:43.162+05:30  WARN 8647 --- [Address Book] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-20T01:46:43.163+05:30  WARN 8647 --- [Address Book] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-03-20T01:46:43.172+05:30  INFO 8647 --- [Address Book] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-20T01:46:43.608+05:30  INFO 8647 --- [Address Book] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-20T01:46:43.680+05:30  INFO 8647 --- [Address Book] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-20T01:46:43.865+05:30 DEBUG 8647 --- [Address Book] [restartedMain] c.e.a.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-03-20T01:46:43.906+05:30  WARN 8647 --- [Address Book] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Found 2 UserDetailsService beans, with names [customUserDetailsService, userDetailsService]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2025-03-20T01:46:43.907+05:30 DEBUG 8647 --- [Address Book] [restartedMain] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-03-20T01:46:44.106+05:30  WARN 8647 --- [Address Book] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-20T01:46:44.359+05:30  INFO 8647 --- [Address Book] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-03-20T01:46:44.394+05:30 DEBUG 8647 --- [Address Book] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-20T01:46:44.667+05:30  INFO 8647 --- [Address Book] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-03-20T01:46:44.705+05:30  INFO 8647 --- [Address Book] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-20T01:46:44.715+05:30  INFO 8647 --- [Address Book] [restartedMain] c.e.addressbook.AddressBookApplication   : Started AddressBookApplication in 3.899 seconds (process running for 4.174)

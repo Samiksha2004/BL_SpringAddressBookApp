@@ -44,6 +44,7 @@ public class SecurityConfig {
                                 "/api/auth/login",           // Public for Login
                                 "/api/auth/forgot-password", // Public for Forgot Password
                                 "/api/auth/reset-password",  // Public for Reset Password
+                                "/api/addressbook/**",
                                 "/h2-console/**"             // Public for H2 Console in dev
                         ).permitAll()
                         .anyRequest().authenticated() // Everything else = JWT secured
