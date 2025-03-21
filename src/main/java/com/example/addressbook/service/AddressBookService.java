@@ -2,13 +2,14 @@ package com.example.addressbook.service;
 
 import com.example.addressbook.dto.AddressBookDTO;
 import com.example.addressbook.model.AddressBookEntry;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.cache.annotation.Caching;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
-import java.util.List;
+import java.util.*;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -17,9 +18,12 @@ public class AddressBookService implements IAddressBookService {
     private final List<AddressBookEntry> contactList;
     private final AtomicInteger idCounter = new AtomicInteger(1);
 
+    private final RabbitTemplate rabbitTemplate;
+
     @Autowired
-    public AddressBookService(List<AddressBookEntry> contactList) {
+    public AddressBookService(List<AddressBookEntry> contactList, RabbitTemplate rabbitTemplate) {
         this.contactList = contactList;
+        this.rabbitTemplate = rabbitTemplate;
     }
 
     @Override
@@ -43,15 +47,33 @@ public class AddressBookService implements IAddressBookService {
     @CacheEvict(value = "contacts", allEntries = true)
     public AddressBookEntry addContact(AddressBookDTO addressBookDTO) {
         AddressBookEntry newContact = new AddressBookEntry(
-                (long)idCounter.getAndIncrement(),
+                (long) idCounter.getAndIncrement(),
                 addressBookDTO.getName(),
                 addressBookDTO.getEmail(),
                 addressBookDTO.getPhone(),
                 addressBookDTO.getAddress()
         );
         contactList.add(newContact);
+
+        // RabbitMQ publish
+        Map<String, Object> message = new HashMap<>();
+        message.put("eventType", "CONTACT_CREATED");
+        message.put("timestamp", java.time.Instant.now().toString());
+
+        Map<String, Object> data = new HashMap<>();
+        data.put("contactId", newContact.getId());
+        data.put("name", newContact.getName());
+        data.put("email", newContact.getEmail());
+        data.put("phone", newContact.getPhone());
+        data.put("address", newContact.getAddress());
+
+        message.put("data", data);
+
+        rabbitTemplate.convertAndSend("addressbook-exchange", "addressbook-routingKey", message);
+
         return newContact;
     }
+
 
     @Override
     @CachePut(value = "contact", key = "#id")

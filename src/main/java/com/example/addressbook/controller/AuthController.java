@@ -6,7 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.example.addressbook.dto.UserDTO;
-
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import java.util.Map;
 
 @RestController
@@ -17,6 +17,7 @@ import java.util.Map;
 public class AuthController {
 
     private final UserService userService;
+    private final RabbitTemplate rabbitTemplate;
 
     // UC1 - Register API
     @PostMapping("/register")
@@ -25,6 +26,14 @@ public class AuthController {
         String email = request.get("email");
         String password = request.get("password");
         UserDTO userDTO = userService.registerUser(username, email, password);
+
+        Map<String, Object> message = Map.of(
+                "username", username,
+                "email", email,
+                "event", "USER_REGISTERED"
+        );
+        rabbitTemplate.convertAndSend("addressbook-exchange", "addressbook-routingKey", message);
+
         return ResponseEntity.ok(userDTO);
     }
 
@@ -35,6 +44,8 @@ public class AuthController {
         String username = request.get("username");
         String password = request.get("password");
         UserDTO userDTO = userService.loginUser(username, password);
+
+
         return ResponseEntity.ok(userDTO);
     }
 
