@@ -45,13 +45,16 @@ public class SecurityConfig {
                                 "/api/auth/forgot-password", // Public for Forgot Password
                                 "/api/auth/reset-password",  // Public for Reset Password
                                 "/api/addressbook/**",
-                                "/h2-console/**"             // Public for H2 Console in dev
+                                "/h2-console/**" ,// Public for H2 Console in dev
+                                "/v3/api-docs/**",
+                                "/swagger-ui/**",
+                                "/swagger-ui.html"
                         ).permitAll()
                         .anyRequest().authenticated() // Everything else = JWT secured
                 )
                 .headers(headers -> headers.frameOptions(frame -> frame.disable()))
-                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+//                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }

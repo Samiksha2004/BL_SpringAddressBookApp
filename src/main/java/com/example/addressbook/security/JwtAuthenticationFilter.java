@@ -30,11 +30,17 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         String requestPath = request.getServletPath();
         System.out.println("Request Path: " + requestPath); // debug ke liye
 
-        // ✅ RELAXED bypass for auth APIs
-        if (requestPath.startsWith("/api/auth/")) {
+        // ✅ RELAXED bypass for auth + swagger APIs
+        if (requestPath.startsWith("/api/auth/") ||
+                requestPath.startsWith("/v3/api-docs") ||
+                requestPath.startsWith("/swagger-ui") ||
+                requestPath.startsWith("/swagger-ui.html") ||
+                requestPath.startsWith("/swagger-resources") ||
+                requestPath.startsWith("/webjars/")) {
             chain.doFilter(request, response);
             return;
         }
+
 
         // ✅ JWT logic starts here
         final String authorizationHeader = request.getHeader("Authorization");

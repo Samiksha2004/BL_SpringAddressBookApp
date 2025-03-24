@@ -7,6 +7,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.example.addressbook.dto.UserDTO;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 import java.util.Map;
 
 @RestController
@@ -14,12 +19,16 @@ import java.util.Map;
 @RequiredArgsConstructor
 @Slf4j
 @CrossOrigin(origins = "*")
+@Tag(name = "Auth API", description = "Authentication APIs including Register, Login, Forgot & Reset Password")
 public class AuthController {
 
     private final UserService userService;
     private final RabbitTemplate rabbitTemplate;
 
-    // UC1 - Register API
+    @Operation(summary = "Register a new user", description = "Register API for creating a new user")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "User registered successfully")
+    })
     @PostMapping("/register")
     public ResponseEntity<UserDTO> register(@RequestBody Map<String, String> request) {
         String username = request.get("username");
@@ -37,7 +46,11 @@ public class AuthController {
         return ResponseEntity.ok(userDTO);
     }
 
-    // UC1 - Login API
+    @Operation(summary = "Login user", description = "Login API to authenticate a user")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "User logged in successfully"),
+            @ApiResponse(responseCode = "401", description = "Invalid credentials")
+    })
     @PostMapping("/login")
     public ResponseEntity<UserDTO> login(@RequestBody Map<String, String> request) {
         log.info("Login API hit for user: {}", request.get("username"));
@@ -45,11 +58,13 @@ public class AuthController {
         String password = request.get("password");
         UserDTO userDTO = userService.loginUser(username, password);
 
-
         return ResponseEntity.ok(userDTO);
     }
 
-    // UC2 - Forgot Password API
+    @Operation(summary = "Forgot password", description = "Generate reset token for forgot password")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Reset token generated successfully")
+    })
     @PostMapping("/forgot-password")
     public ResponseEntity<?> forgotPassword(@RequestBody Map<String, String> request) {
         String username = request.get("username");
@@ -63,7 +78,11 @@ public class AuthController {
         return ResponseEntity.ok(response);
     }
 
-    // UC2 - Reset Password API
+    @Operation(summary = "Reset password", description = "Reset password using token")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Password has been reset successfully"),
+            @ApiResponse(responseCode = "400", description = "Invalid or expired token")
+    })
     @PostMapping("/reset-password")
     public ResponseEntity<?> resetPassword(@RequestBody Map<String, String> request) {
         String token = request.get("token");

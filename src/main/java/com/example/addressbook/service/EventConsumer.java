@@ -12,7 +12,4 @@ public class EventConsumer {
         System.out.println("Received message: " + message);
 
     }
-
-
-
 }
