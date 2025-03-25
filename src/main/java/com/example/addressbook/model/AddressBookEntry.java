@@ -3,7 +3,7 @@ package com.example.addressbook.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "address_book")
+@Table(name = "address_book_2")
 public class AddressBookEntry {
 
     @Id

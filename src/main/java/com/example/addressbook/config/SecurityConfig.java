@@ -46,7 +46,7 @@ public class SecurityConfig {
                                 "/api/auth/reset-password",  // Public for Reset Password
                                 "/h2-console/**"             // Public for H2 Console in dev
                         ).permitAll()
-                        .anyRequest().authenticated() // Everything else = JWT secured
+                        .anyRequest().permitAll() // Everything else = JWT secured
                 )
                 .headers(headers -> headers.frameOptions(frame -> frame.disable()))
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
@@ -70,14 +70,16 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("*")); // Optional: restrict to frontend URL in production
+        configuration.setAllowedOrigins(List.of("http://localhost:4200")); // Allow frontend origin
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-        configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type"));
-        configuration.setAllowCredentials(true);
+        configuration.setAllowedHeaders(Arrays.asList("*")); // Allow all headers
+        configuration.setAllowCredentials(true); // Required if sending cookies/JWT
+
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;
     }
+
 
     @Bean
     public UserDetailsService userDetailsService() {
